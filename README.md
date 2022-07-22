@@ -10,4 +10,6 @@ There are 4 sections that have been added to the page
 
 it is clear which section is being viewed while scrolling through the page
 
+using a Scroll Up button it shows up when going down in the page  
+
 and All features are usable across modern desktop, tablet, and phone browsers.
