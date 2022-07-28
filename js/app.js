@@ -22,8 +22,9 @@
  * Define Global Variables
  * 
 */
-let sections = Array.from(document.querySelectorAll("section")) ;
-let menu = document.getElementById("navbar__list") ;
+let list = document.getElementById("navbar__list") ;
+let sections = document.querySelectorAll("section") ;
+
 
 
 /**
@@ -31,38 +32,22 @@ let menu = document.getElementById("navbar__list") ;
  * Start Helper Functions
  * 
 */
-function createListItem(){
+function createList(){
     for(let i=0;i<sections.length;i++){
-        sectionName = sections[i].getAttribute("data-nav") ;
-        sectionLink = sections[i].getAttribute("id") ;
-        let listItem = document.createElement("li") ;
-        listItem.innerHTML = `<a class="menu__link" href="#${sectionLink}">${sectionName}</a>` ;
-        menu.appendChild(listItem) ;
+        Link = sections[i].getAttribute("id") ;
+        Name = sections[i].getAttribute("id") ;
+        insertSection();  
     }
+
+}
+function insertSection() {
+    listItem = document.createElement("li");
+    listItem.innerHTML = `<a class="menu__link" href="#${Link}">${Name}</a>`;
+    list.append(listItem);
 }
 
-function sectionInView (el){
-    sectionPostion = el.getBoundingClientRect() ;
-    return(sectionPostion.top>=0)
-}
 
-    function sectionActive (){
-        
-        for (i=0;i<sections.length;i++){
 
-            if(sectionInView(sections[i])){
-
-                if(!sections[i].classList.contains("your-active-class")){
-
-                    sections[i].classList.add("your-active-class");
-            }
-            else{
-                sections[i].classList.remove("your-active-class");
-            }          
-        }       
-    }
-    
-}    
 //scroll to top button
 let scrollBtn = document.getElementById("toTop");
 
@@ -81,6 +66,30 @@ scrollBtn.onclick = function(){
         behavior:"smooth"
     });
 }
+
+function sectionSelected (el){
+    sectionSelect = el.getBoundingClientRect() ;
+    return(sectionSelect.top)
+}
+
+    function sectionActive (){
+        
+        for (i=0;i<sections.length;i++){
+
+            if(sectionSelected(sections[i])){
+
+                if(!sections[i].classList.contains("your-active-class")){
+
+                    sections[i].classList.add("your-active-class");
+            }
+            else{
+                sections[i].classList.remove("your-active-class");
+            }          
+        }       
+    }
+    
+}    
+
 
 
 /*
@@ -108,7 +117,7 @@ document.querySelector("html").style.scrollBehavior ="smooth";
 
 
 // Scroll to section on link click
-createListItem();
+createList();
 // Set sections as active
 document.addEventListener("scroll",sectionActive);
 
