@@ -1,3 +1,9 @@
+#
+languges used:
+*HTML
+*CSS
+*JavaScript
+#
 The code in this repository is meant to satisfy the project of the Front End Web Developer nano degree. it require conversion of a static page to a dynamic page by using javaScript that allows some sort of interaction.
 
 the Start code is getten from udacity .
