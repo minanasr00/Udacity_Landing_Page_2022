@@ -1,15 +1,11 @@
-The code in this repository is meant to satisfy the project # 1 rubric of the Front End Web Developer nano degree. A landing page is the conversion of a static page to a page that allows some sort of interaction. The dynamicity is achieved through javascript.
+The code in this repository is meant to satisfy the project of the Front End Web Developer nano degree. it require conversion of a static page to a dynamic page by using javaScript that allows some sort of interaction.
 
-Starter code is taken from udacity repository.
+the Start code is getten from udacity .
 
-This project has the scope of converting a static web page into a single interactive page.
+The project main perpose is converting a static web page into a interactive page.
 
-It uses javascript to dynamically create navbar links based on the content, when a section is in the viewport it shows the active state of that section.
+we use javascript to create navbar links based on the content when a section is in the viewport it shows the active section.
 
-There are 4 sections that have been added to the page
+the page contains 4 section.
 
-it is clear which section is being viewed while scrolling through the page
-
-using a Scroll Up button it shows up when going down in the page  
-
-and All features are usable across modern desktop, tablet, and phone browsers.
+it is clear which section is being viewed while browsing the page
