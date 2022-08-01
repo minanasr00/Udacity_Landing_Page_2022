@@ -24,6 +24,7 @@
 */
 let list = document.getElementById("navbar__list") ;
 let sections = document.querySelectorAll("section") ;
+let scrollBtn = document.getElementById("toTop");
 
 
 
@@ -53,7 +54,7 @@ createList();
 
 
 //scroll to top button
-let scrollBtn = document.getElementById("toTop");
+
 
 window.onscroll = function() {
     if (window.scrollY<2000){
@@ -100,16 +101,19 @@ function sectionSelected (el){
     function sectionActive (){
         
         for (i=0;i<sections.length;i++){
-            if(sectionSelected(sections[i])<200 && sectionSelected(sections[i])>=-200){
+            if(sectionSelected(sections[i])<250 && sectionSelected(sections[i])>=-250){
                 
                 sections[i].classList.add("your-active-class");
-                
-                
+                id= sections[i].id.slice(7,8)-1;
+                listView= document.querySelectorAll("li");
+                listView[id].style.backgroundColor ="purple"; 
             }
             else{
 
                 sections[i].classList.remove("your-active-class");
-
+                id= sections[i].id.slice(7,8)-1;
+                listView= document.querySelectorAll("li");
+                listView[id].style.backgroundColor ="transparent";
             }           
             
     }
